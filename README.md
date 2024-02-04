@@ -21,6 +21,9 @@
 [9. Conclusiones.](#id9)
 
 ## 1. Justificación y descripción del proyecto.<a name="id1"></a>
+
+¡Descubre la revolución en el reconocimiento de objetos con nuestra increíble IA "FoundYou"! Presentamos la herramienta definitiva que hará que buscar objetos sea más fácil que nunca.
+¿Alguna vez has perdido las llaves, el teléfono o el mando de la TV? ¡No te preocupes más! Con FoundYou, simplemente dile a la IA qué objeto estás buscando, y en cuestión de segundos, te mostrará su ubicación exacta. ¡Es como tener un asistente personal que encuentra todo por ti!
 ## 2. Obtención de datos.<a name="id2"></a>
 ## 3. Limpieza de datos. <a name="id3"></a>
 ## 4. Exploración y visualización.<a name="id4"></a>
