@@ -183,9 +183,13 @@ Tras terminar el entrenamiento vemos un resumen de las iteraciones que ha realiz
 | 79        | 0.70564            | 0.4307             | 1.0002             | 0.8831                   | 0.80211               | 0.89361              | 0.65726                 | 0.96027          | 0.77231          | 1.208            | 9.425e-05  | 9.425e-05  | 9.425e-05  |
 | 80        | 0.69584            | 0.42559            | 0.99257            | 0.87153                  | 0.81407               | 0.89305              | 0.65215                 | 0.97947          | 0.79239          | 1.2251           | 6.95e-05   | 6.95e-05   | 6.95e-05   |
 
+Por otro lado, podemos ver una foto generada por el propio modelo dónde nos muestra diferentes gráficas con los resultados.
+
+<img src="https://drive.google.com/uc?id=1PiJosQad5XwGDBrLuDIV-OTLPDthrTN3" height="300px">
+
 Observamos la matriz de confusión y nos aseguramos de que no detecta el fondo como fuego y viceversa.
 
-<img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="250px">
+<img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="300px">
 
 ### Comprobación en local con cámara
 
@@ -239,7 +243,7 @@ cv2.destroyAllWindows()
 
 **Resultados cámara local**
 
-<img src="https://drive.google.com/uc?id=1_5lwt27E4EZv9bmMecJ-FGSGsvxjMWQo" height="300px">
+<img src="https://drive.google.com/uc?id=1_5lwt27E4EZv9bmMecJ-FGSGsvxjMWQo" width="600px" height="400px">
 
 ## 7. NPL<a name="id7"></a>
 ## 8. Aplicación web.<a name="id8"></a>
