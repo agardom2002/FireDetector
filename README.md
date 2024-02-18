@@ -100,7 +100,7 @@ Instalación de los paquetes necesarios:
 ```
 Importamos las librerías necesarias tanto para descargar el dataset como para entrenar el modelo
 
-```
+```python:
 import ultralytics
 from roboflow import Roboflow
 from ultralytics import YOLO
