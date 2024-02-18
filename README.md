@@ -2,7 +2,7 @@
 ***Proyecto realizado por [Alejandro Fernández Romero](https://github.com/AlexFdezRomero) y [Andrés García Domínguez](https://github.com/agardom2002).***
 
 ## Índice
-[1. Justificación y descripción del proyecto.](#id1)
+✔️[1. Justificación y descripción del proyecto.](#id1)
 
 [2. Obtención de datos.](#id2)
 
@@ -10,9 +10,9 @@
 
 [4. Exploración y visualización.](#id4)
 
-[5. Preparación de los datos para los algoritmos de Machine Learning.](#id5)
+✔️[5. Preparación de los datos para los algoritmos de Machine Learning.](#id5)
 
-[6. Entrenamiento del modelo y comprobación del rendimiento.](#id6)
+✔️[6. Entrenamiento del modelo y comprobación del rendimiento.](#id6)
 
 [7. NPL](#id7)
 
