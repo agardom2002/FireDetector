@@ -189,9 +189,7 @@ Por otro lado, podemos ver una foto generada por el propio modelo dónde nos mue
 
 Observamos la matriz de confusión y nos aseguramos de que no detecta el fondo como fuego y viceversa.
 
-<p align="center">
 <img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="350px">
-</p>
 
 ### Comprobación en local con cámara
 
