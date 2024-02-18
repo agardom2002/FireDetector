@@ -60,7 +60,7 @@ Para ello, vamos a utilizar un dataset obtenido desde la página [Roboflow](http
 ## 5. Preparación de los datos para los algoritmos de Machine Learning.<a name="id5"></a>
 
 Si queremos segmentar imágenes manualmente para añadirlas al dataset podemos instalar en nuestro equipo **labelme**. En este caso lo hemos instalado y utilizado con Visual Studio Code.
-```python:
+```python
 pip install labelme
 ```
 
@@ -100,7 +100,7 @@ Instalación de los paquetes necesarios:
 ```
 Importamos las librerías necesarias tanto para descargar el dataset como para entrenar el modelo
 
-```python:
+```python
 import ultralytics
 from roboflow import Roboflow
 from ultralytics import YOLO
