@@ -84,9 +84,14 @@ crea un archivo **dataset.yaml** que será el que utilizaremos para realizar el 
 
 ## 6. Entrenamiento del modelo y comprobación del rendimiento.<a name="id6"></a>
 
-Para el entrenamiento del modelo hemos utilizado el modelo **YOLOv8**.
+Enlace al entrenamiento en un documento de [Google Colab](https://colab.research.google.com/drive/1mmFQI4K9Ic9whAI8TFCMuOtnLl3uUM4S?usp=sharing).
 
-Los pasos utlizados para el entrenamietno se pueden ver en el siguiente documento de [Google Colab](https://colab.research.google.com/drive/1mmFQI4K9Ic9whAI8TFCMuOtnLl3uUM4S?usp=sharing).
+###**Entrenamiento del modelo YOLOv8**
+
+Instalación de los paquetes necesarios:
+
+* ultralytics: Para obtener y entrenar el modelo
+* roboflow: Para descargar el dataset de imágenes para el entrenamiento
 
 ## 7. NPL<a name="id7"></a>
 ## 8. Aplicación web.<a name="id8"></a>
