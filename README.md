@@ -189,8 +189,8 @@ Por otro lado, podemos ver una foto generada por el propio modelo dónde nos mue
 
 Observamos la matriz de confusión y nos aseguramos de que no detecta el fondo como fuego y viceversa.
 
-<center> <img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="350px"> </center>
- 
+<img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="350px" align="center">
+  
 ### Comprobación en local con cámara
 
 Para comprobar el funcionamiento del modelo, primero conectameros el modelo a una cámara de manera local.
