@@ -165,11 +165,7 @@ Copiamos la carpeta runs a un directorio de nuestro Google Drive
 ```python
 !cp -r /content/runs /content/drive/MyDrive/runs
 ```
-
-## 7. NPL<a name="id7"></a>
-## 8. Aplicación web.<a name="id8"></a>
-
-### Cámara local
+### Comprobación en local con cámara
 
 Para comprobar el funcionamiento del modelo, primero conectameros el modelo a una cámara de manera local.
 
@@ -222,5 +218,8 @@ cv2.destroyAllWindows()
 **Resultados cámara local**
 
 <img src="https://drive.google.com/uc?id=1_5lwt27E4EZv9bmMecJ-FGSGsvxjMWQo" height="300px">
+
+## 7. NPL<a name="id7"></a>
+## 8. Aplicación web.<a name="id8"></a>
 
 ## 9. Conclusiones.<a name="id9"></a>
