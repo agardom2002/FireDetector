@@ -90,8 +90,61 @@ Enlace al entrenamiento en un documento de [Google Colab](https://colab.research
 
 Instalación de los paquetes necesarios:
 
-* ultralytics: Para obtener y entrenar el modelo
-* roboflow: Para descargar el dataset de imágenes para el entrenamiento
+* **ultralytics:** Para obtener y entrenar el modelo
+* **roboflow:** Para descargar el dataset de imágenes para el entrenamiento
+
+```
+!pip install ultralytics==8.0.196
+!pip install roboflow
+```
+Importamos las librerías necesarias tanto para descargar el dataset como para entrenar el modelo
+
+```
+import ultralytics
+from roboflow import Roboflow
+from ultralytics import YOLO
+```
+Descargamos el dataset de imágenes. Para ello usamos la API proporcionada de Roboflow
+
+```
+rf = Roboflow(api_key="MAiCeSuy58yjlg2ma4QK")
+project = rf.workspace("-jwzpw").project("continuous_fire")
+dataset = project.version(6).download("yolov8")
+```
+Comando para realizar el entrenamiento del modelo
+
+Los diferentes parámetros que se usan son :
+
+- **task**: Sirve para indicar la tarea a realizar.
+  - detect: Consiste en detectar objetos en una imagen o video, dibujando cuadros a su alrededor calificándolos según sus características. Puede detectar varios objetos a la vez.
+  - segment: Segmenta una imagen en diferentes regiones basándose en el contenido de la imagen. A cada region se la asigna una etiqueta. En diferencia con *detect*, no es un cuadro, es la silueta del objeto.
+  - classify: Clasifica una imagen en diferentes categorías basándose en su contenido.
+  - pose: Detecta los puntos clave de un objeto en un fotograma y se utilizan
+  para seguir el movimiento o estimar la pose.
+
+- **mode**:
+  - train: Afinar el modelo en un conjunto de datos personalizados o precargados. El proceso consiste en optimizar los parámetros para una mayor
+  precisión.
+  - val: Se utiliza para un modelo una vez entrenado. Evalúa su precisión y
+  rendimiento, permitiendo ajustar los hiperparámetros para mejorar su rendimiento.
+  - predict: Se carga el modelo entrenado y se le proporcionan nuevas imágenes o videos para ver su funcionamiento.
+  - export: Permite exportar el modelo a un formato que pueda utilizarse para su
+  despliegue.
+  - track: Modo seguimiento. Con el modelo entrenado, se le proporciona un flujo de vídeo en directo para seguir objetos en tiempo real.
+  - benchmark: Su utiliza para perfilar la velocidad y precisión de varios formatos de exportación. Con información como; el tamaño del formato exportado, las diferentes métricas y el tiempo de inferencia por imagen, podemos elegir el formato más óptimo.
+
+- **model**: Modelo a utilizar, en este caso *yolov8s.pt*.
+Para yolov8 hay diferentes variantes; **n** (nano), **s** (small), **m** (medium), **l** (large) y **x** (extra large).
+
+- **data**: Ruta donde se encuentra el archivo **.yaml** que indica los diferentes directorios de entrenamiento y validación.
+
+- **epochs**: Establecer el número de iteraciones de los datos de entrenamiento.
+
+- **imgsz**: Especificar el tamaño de las imágenes.
+
+- **plots**: Indicar que se generen gráficas para evaluar el rendimiento del entrenamiento.
+```
+```
 
 ## 7. NPL<a name="id7"></a>
 ## 8. Aplicación web.<a name="id8"></a>
