@@ -165,6 +165,9 @@ Copiamos la carpeta runs a un directorio de nuestro Google Drive
 ```python
 !cp -r /content/runs /content/drive/MyDrive/runs
 ```
+Observamos la matriz de confusión.
+
+<img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="250px">
 ### Comprobación en local con cámara
 
 Para comprobar el funcionamiento del modelo, primero conectameros el modelo a una cámara de manera local.
