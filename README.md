@@ -60,8 +60,9 @@ Para ello, vamos a utilizar un dataset obtenido desde la página [Roboflow](http
 ## 5. Preparación de los datos para los algoritmos de Machine Learning.<a name="id5"></a>
 
 Si queremos segmentar imágenes manualmente para añadirlas al dataset podemos instalar en nuestro equipo **labelme**. En este caso lo hemos instalado y utilizado con Visual Studio Code.
-
-`pip install labelme`
+```python:
+pip install labelme
+```
 
 Una vez instalado, se puede iniciar escribiendo **labelme** en la terminal. 
 Indicamos la carpeta donde se encuentran las imágenes a segmentar. El sigiente paso es mediante el ratón, indicar la zona del objetivo (target) y etiquetarlo. 
