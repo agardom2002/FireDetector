@@ -72,11 +72,14 @@ Con cada imagen, se genera un archivo .json que indica las coordenadas de la seg
 
 Cuando se hayan segmentado y etiquetado todas las imágenes tenemos que instalar **labelme2yolo** para transformar los datos para el algoritmo.
 
-`pip install labelme2yolo`
-
+```python
+pip install labelme2yolo
+```
 Tras instalarlo debemos ejecutar el siguiente comando para preparar los datos:
 
-`labelme2yolo --json_dir "Ruta de la carpeta con las imágenes"`
+```python
+labelme2yolo --json_dir "Ruta de la carpeta con las imágenes"
+```
 
 Se puede observar que al ejecutar la transformación se genera una carpeta que prepara el dataset para el entrenamiento, separa por un lado las imágenes de los archivos .json asociados. Además,
 crea un archivo **dataset.yaml** que será el que utilizaremos para realizar el entrenamiento.
@@ -94,7 +97,7 @@ Instalación de los paquetes necesarios:
 * **ultralytics:** Para obtener y entrenar el modelo
 * **roboflow:** Para descargar el dataset de imágenes para el entrenamiento
 
-```
+```python
 !pip install ultralytics==8.0.196
 !pip install roboflow
 ```
@@ -107,7 +110,7 @@ from ultralytics import YOLO
 ```
 Descargamos el dataset de imágenes. Para ello usamos la API proporcionada de Roboflow
 
-```
+```python
 rf = Roboflow(api_key="MAiCeSuy58yjlg2ma4QK")
 project = rf.workspace("-jwzpw").project("continuous_fire")
 dataset = project.version(6).download("yolov8")
@@ -144,22 +147,22 @@ Para yolov8 hay diferentes variantes; **n** (nano), **s** (small), **m** (medium
 - **imgsz**: Especificar el tamaño de las imágenes.
 
 - **plots**: Indicar que se generen gráficas para evaluar el rendimiento del entrenamiento.
-```
+```python
 !yolo task=detect mode=train model=yolov8s.pt data=/content/continuous_fire-6/data.yaml epochs=80 imgsz=640 plots=True
 ```
 Forma para descargar la carpeta runs de forma local en nuestro equipo
 
-```
+```python
 from google.colab import files
 files.download('/content/runs')
 ```
 Montar nuestro Google Drive
-```
+```python
 from google.colab import drive
 drive.mount('/content/drive')
 ```
 Copiamos la carpeta runs a un directorio de nuestro Google Drive
-```
+```python
 !cp -r /content/runs /content/drive/MyDrive/runs
 ```
 
