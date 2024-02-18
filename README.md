@@ -86,7 +86,7 @@ crea un archivo **dataset.yaml** que será el que utilizaremos para realizar el 
 
 Enlace al entrenamiento en un documento de [Google Colab](https://colab.research.google.com/drive/1mmFQI4K9Ic9whAI8TFCMuOtnLl3uUM4S?usp=sharing).
 
-###**Entrenamiento del modelo YOLOv8**
+### **Entrenamiento del modelo YOLOv8**
 
 Instalación de los paquetes necesarios:
 
