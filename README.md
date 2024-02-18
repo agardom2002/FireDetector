@@ -144,6 +144,22 @@ Para yolov8 hay diferentes variantes; **n** (nano), **s** (small), **m** (medium
 
 - **plots**: Indicar que se generen gráficas para evaluar el rendimiento del entrenamiento.
 ```
+!yolo task=detect mode=train model=yolov8s.pt data=/content/continuous_fire-6/data.yaml epochs=80 imgsz=640 plots=True
+```
+Forma para descargar la carpeta runs de forma local en nuestro equipo
+
+```
+from google.colab import files
+files.download('/content/runs')
+```
+Montar nuestro Google Drive
+```
+from google.colab import drive
+drive.mount('/content/drive')
+```
+Copiamos la carpeta runs a un directorio de nuestro Google Drive
+```
+!cp -r /content/runs /content/drive/MyDrive/runs
 ```
 
 ## 7. NPL<a name="id7"></a>
