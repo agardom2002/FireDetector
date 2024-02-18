@@ -168,4 +168,57 @@ Copiamos la carpeta runs a un directorio de nuestro Google Drive
 
 ## 7. NPL<a name="id7"></a>
 ## 8. Aplicación web.<a name="id8"></a>
+
+### Cámara local
+
+Para comprobar el funcionamiento del modelo, primero conectameros el modelo a una cámara de manera local.
+
+Verificamos que tenemos ultralytics instalado.
+```python
+!pip install ultralytics
+```
+Instalamos la librería OpenCV para poder trabajar con la cámara.
+```python
+!pip install opencv-python==4.6.0.66
+```
+
+Importamos las librerias necesarias.
+```python
+import ultralytics
+import cv2
+from ultralytics import YOLO
+from IPython.display import Image
+```
+Ejecutamos el código para poner en marcha la cámara con el modelo integrado:
+
+```python
+# Leer nuestro modelo, tenemos que especificar la ruta del modelo.
+model = YOLO("best.pt")
+# Capturar video
+cap =  cv2.VideoCapture(1)
+
+# Bucle
+while True:
+    # Leer fotogramas
+    ret, frame = cap.read()
+
+    # Leemos resultados
+    resultados = model.predict(frame, imgsz = 640, conf=0.80)
+
+    # Mostramos resultados
+    anotaciones = resultados[0].plot()
+
+    # Mostramos nuestros fotogramas
+    cv2.imshow("DETECCION Y SEGMENTACION", anotaciones)
+
+    # Cerrar nuestro programa
+    if cv2.waitKey(1) == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+```
+**Resultados cámara local**
+<img src="https://drive.google.com/uc?id=15lwt27E4EZv9bmMecJ-FGSGsvxjMWQo" height="300px">
+
 ## 9. Conclusiones.<a name="id9"></a>
