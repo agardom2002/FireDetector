@@ -218,7 +218,9 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 ```
+
 **Resultados cámara local**
+
 <img src="https://drive.google.com/uc?id=1_5lwt27E4EZv9bmMecJ-FGSGsvxjMWQo" height="300px">
 
 ## 9. Conclusiones.<a name="id9"></a>
