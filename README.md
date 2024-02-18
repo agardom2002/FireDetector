@@ -185,11 +185,11 @@ Tras terminar el entrenamiento vemos un resumen de las iteraciones que ha realiz
 
 Por otro lado, podemos ver una foto generada por el propio modelo dónde nos muestra diferentes gráficas con los resultados.
 
-<img src="https://drive.google.com/uc?id=1PiJosQad5XwGDBrLuDIV-OTLPDthrTN3" height="300px">
+<img src="https://drive.google.com/uc?id=1PiJosQad5XwGDBrLuDIV-OTLPDthrTN3" height="350px">
 
 Observamos la matriz de confusión y nos aseguramos de que no detecta el fondo como fuego y viceversa.
 
-<img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="300px">
+<img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="350px" style="text-align:center">
 
 ### Comprobación en local con cámara
 
