@@ -51,7 +51,7 @@ haciendo que sea mucho más veloz y preciso (Enlace a su [GitHub](https://github
 ## 2. Obtención de datos.<a name="id2"></a>
 
 Al utilizar el algoritmo YOLOv8, necesitamos tanto las imágenes para entrenar el modelo cómo la segmentación de estas imágenes para indicar cuál es el target, en este caso el fuego.
-Para ello, vamos a utilizar un dataset obtenido desde la página [Roboflow](https://universe.roboflow.com/aj-garcia-736tc/fire-dataset-for-yolov8).
+Para ello, vamos a utilizar un dataset obtenido desde la página [Roboflow](https://universe.roboflow.com/-jwzpw/continuous_fire).
 
 <img src="https://drive.google.com/uc?id=1CCq5_j7wUpI4lIWwtwRNHIPj7MLmnPVK" height="150px">
 
