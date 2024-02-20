@@ -46,7 +46,7 @@
 Este proyecto se basa en un modelo de reconocimiento y segmentación de imágenes en tiempo real entrenado para detectar si hay fuego en la imagen, utiliza un algoritmo llamado YOLO que se centra en este tipo de modelos
 haciendo que sea mucho más veloz y preciso (Enlace a su [GitHub](https://github.com/ultralytics/ultralytics)).
 
-<img src="https://drive.google.com/uc?id=1CURd9SyhdrQgs0kD-ZFQW8m44clrS6bJ" height="600" width="100%">
+<img src="Imgs/Inicio_pred.jpg" height="600" width="100%">
 
 ***Imagen obtenida de la predicción del modelo entrenado.***
 
@@ -55,7 +55,7 @@ haciendo que sea mucho más veloz y preciso (Enlace a su [GitHub](https://github
 Al utilizar el algoritmo YOLOv8, necesitamos tanto las imágenes para entrenar el modelo cómo la segmentación de estas imágenes para indicar cuál es el target, en este caso, el fuego.
 Para ello, una de las opciones es utilizar un dataset obtenido desde la página [Roboflow](https://universe.roboflow.com/-jwzpw/continuous_fire).
 
-<img src="https://drive.google.com/uc?id=1CCq5_j7wUpI4lIWwtwRNHIPj7MLmnPVK" width="100%">
+<img src="Imgs/dataset.PNG" width="100%">
 
 La otra opción elegida es obtener imagenes mediante Web **Scraping**, en este caso a la página [123rf](https://es.123rf.com/).
 El Scraping se ha realizado en el siguente documento de [Google Colab](https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing).
@@ -224,7 +224,7 @@ Una vez instalado, se puede iniciar escribiendo **labelme** en la terminal.
 Indicamos la carpeta donde se encuentran las imágenes a segmentar. El sigiente paso es mediante el ratón, indicar la zona del objetivo (target) y etiquetarlo. 
 Con cada imagen, se genera un archivo .json que indica las coordenadas de la segmentación del target en la imagen.
 
-<img src="https://drive.google.com/uc?id=1j5LO06FLwN3qexNPkma1XLXLHwTlQCou" width="100%">
+<img src="Imgs/Labelme.PNG" width="100%">
 
 Cuando se hayan segmentado y etiquetado todas las imágenes tenemos que instalar **labelme2yolo** para transformar los datos para el algoritmo.
 
@@ -240,7 +240,7 @@ labelme2yolo --json_dir "Ruta de la carpeta con las imágenes"
 Se puede observar que al ejecutar la transformación se genera una carpeta que prepara el dataset para el entrenamiento, separa por un lado las imágenes de los archivos .json asociados. Además,
 crea un archivo **dataset.yaml** que será el que utilizaremos para realizar el entrenamiento.
 
-<img src="https://drive.google.com/uc?id=1qTqUW3hMEv5jayhPxI3plWtiEEChNsSe" height="450px" width="300px">
+<img src="Imgs/labelme2yolo.PNG" height="450px" width="300px">
  
 ## 6. Entrenamiento del modelo y comprobación del rendimiento.<a name="id6"></a>
 
