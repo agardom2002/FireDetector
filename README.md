@@ -139,7 +139,7 @@ os.system(f'zip -r {nombre_archivo_zip} {directorio_imagenes}')
 # Descargar el archivo ZIP
 files.download(nombre_archivo_zip)
 ```
-```python
+```
 # Resultado del scraping:
 Imagen 1 descargada y guardada como imagenes/imagen_1.png
 Imagen 2 descargada y guardada como imagenes/imagen_2.png
