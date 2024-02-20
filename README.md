@@ -55,7 +55,7 @@ Para ello, una de las opciones es utilizar un dataset obtenido desde la página 
 
 <img src="https://drive.google.com/uc?id=1CCq5_j7wUpI4lIWwtwRNHIPj7MLmnPVK" height="150px">
 
-La otra opción elegida es obtener imagenes mediante Web **Scraping**, en este caso a la página [123rf](https://es.123rf.com/)
+La otra opción elegida es obtener imagenes mediante Web **Scraping**, en este caso a la página [123rf](https://es.123rf.com/).
 
 Comenzamos importando las librerias necesarias.
 ```python
@@ -106,11 +106,11 @@ imagenes_fuego = sopa_html.find_all('img')
 print('img de incendio:', type(imagenes_fuego))
 print('Longitud:', len(imagenes_fuego))
 ```
-```python
+```
 img de incendio: <class 'bs4.element.ResultSet'>
 Longitud: 547
 ```
-Obtener la URL base de la página, si la respuesta tiene una URL, usarla, si no, establecer una URL predeterminada 'https://es.123rf.com/'
+Obtener la URL base de la página, si la respuesta tiene una URL, usarla, si no, establecer una URL predeterminada 'https://es.123rf.com/'.
 ```python
 url_base = respuesta.url if respuesta.url else 'https://es.123rf.com/'
 ```
