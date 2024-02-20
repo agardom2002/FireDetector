@@ -190,7 +190,7 @@ En este ejemplo lo copiamos a nuestro Google Drive con el siguiente comando.
 
 Teniendo la carpeta descargada en nuestro Google Drive podemos ver los diferentes árboles de carpetas que trae.
 
-<img src="Imgs/Carpetas.PNG" height="350px" width="100%">
+<img src="Imgs/Carpetas.PNG" height="450px" width="100%">
 
 Por un lado, vemos dos README que indican las credenciales del dataset perteneciente a RoboFlow. Además, observamos un archivo **data.yaml**
 que incluye la información sobre las rutas de entrenamiento, prueba y validación así como los distintos targets (en este caso sólo *fire*) y 
@@ -201,15 +201,15 @@ en archivos **.txt** las coordenadas de la segmentación de la imagen que indica
 
 Primero vemos la carpeta con las imágenes de entrenamiento:
 
-<img src="Imgs/Train-Images.PNG" height="350px" width="100%">
+<img src="Imgs/Train-Images.PNG" height="450px" width="100%">
 
 Ahora vemos la carpeta con las coordenadas de cada imagen:
 
-<img src="Imgs/Train-Labels.PNG" height="250px">
+<img src="Imgs/Train-Labels.PNG" height="450px" width="100%">
 
 Si abrimos uno de estos documentos observamos las coordenadas de uno de los segmentos:
 
-<img src="Imgs/Label.PNG" height="100px">
+<img src="Imgs/Label.PNG" height="100px" width="100%">
 
 ## 5. Preparación de los datos para los algoritmos de Machine Learning.<a name="id5"></a>
 
@@ -222,7 +222,7 @@ Una vez instalado, se puede iniciar escribiendo **labelme** en la terminal.
 Indicamos la carpeta donde se encuentran las imágenes a segmentar. El sigiente paso es mediante el ratón, indicar la zona del objetivo (target) y etiquetarlo. 
 Con cada imagen, se genera un archivo .json que indica las coordenadas de la segmentación del target en la imagen.
 
-<img src="https://drive.google.com/uc?id=1j5LO06FLwN3qexNPkma1XLXLHwTlQCou" height="300px">
+<img src="https://drive.google.com/uc?id=1j5LO06FLwN3qexNPkma1XLXLHwTlQCou" height="400px" width="100%">
 
 Cuando se hayan segmentado y etiquetado todas las imágenes tenemos que instalar **labelme2yolo** para transformar los datos para el algoritmo.
 
@@ -238,7 +238,7 @@ labelme2yolo --json_dir "Ruta de la carpeta con las imágenes"
 Se puede observar que al ejecutar la transformación se genera una carpeta que prepara el dataset para el entrenamiento, separa por un lado las imágenes de los archivos .json asociados. Además,
 crea un archivo **dataset.yaml** que será el que utilizaremos para realizar el entrenamiento.
 
-<img src="https://drive.google.com/uc?id=1qTqUW3hMEv5jayhPxI3plWtiEEChNsSe" height="250px">
+<img src="https://drive.google.com/uc?id=1qTqUW3hMEv5jayhPxI3plWtiEEChNsSe" height="350px" width="100%">
 
 ## 6. Entrenamiento del modelo y comprobación del rendimiento.<a name="id6"></a>
 
@@ -339,11 +339,11 @@ Tras terminar el entrenamiento vemos un resumen de las iteraciones que ha realiz
 
 Por otro lado, podemos ver una foto generada por el propio modelo dónde nos muestra diferentes gráficas con los resultados.
 
-<img src="https://drive.google.com/uc?id=1PiJosQad5XwGDBrLuDIV-OTLPDthrTN3" height="350px">
+<img src="https://drive.google.com/uc?id=1PiJosQad5XwGDBrLuDIV-OTLPDthrTN3" height="450px" width="100%">
 
 Observamos la matriz de confusión y nos aseguramos de que no detecta el fondo como fuego y viceversa.
 
-<img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="350px">
+<img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" height="450px" width="100%">
 
 ### Comprobación en local con cámara
 
@@ -397,7 +397,7 @@ cv2.destroyAllWindows()
 
 **Resultados cámara local**
 
-<img src="https://drive.google.com/uc?id=1_5lwt27E4EZv9bmMecJ-FGSGsvxjMWQo" width="600px" height="400px">
+<img src="https://drive.google.com/uc?id=1_5lwt27E4EZv9bmMecJ-FGSGsvxjMWQo" height="400px" width="100%">
 
 ## 7. NPL<a name="id7"></a>
 ## 8. Aplicación web.<a name="id8"></a>
