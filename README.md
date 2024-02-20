@@ -405,7 +405,7 @@ cv2.destroyAllWindows()
 
 **Resultados cámara local**
 
-<img src="prueba_camara.PNG" width="100%">
+<img src="Imgs/prueba_camara.PNG" width="100%">
 
 ## 7. NPL.<a name="id7"></a>
 
