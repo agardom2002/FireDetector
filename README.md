@@ -56,7 +56,7 @@ Para ello, una de las opciones es utilizar un dataset obtenido desde la página 
 <img src="https://drive.google.com/uc?id=1CCq5_j7wUpI4lIWwtwRNHIPj7MLmnPVK" height="150px">
 
 La otra opción elegida es obtener imagenes mediante Web **Scraping**, en este caso a la página [123rf](https://es.123rf.com/).
-El Scraping se ha realizado en el siguente documento de [Google Colab](https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing)).
+El Scraping se ha realizado en el siguente documento de [Google Colab](https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing).
 
 Comenzamos importando las librerias necesarias.
 ```python
