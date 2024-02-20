@@ -50,10 +50,107 @@ haciendo que sea mucho más veloz y preciso (Enlace a su [GitHub](https://github
 
 ## 2. Obtención de datos.<a name="id2"></a>
 
-Al utilizar el algoritmo YOLOv8, necesitamos tanto las imágenes para entrenar el modelo cómo la segmentación de estas imágenes para indicar cuál es el target, en este caso el fuego.
-Para ello, vamos a utilizar un dataset obtenido desde la página [Roboflow](https://universe.roboflow.com/-jwzpw/continuous_fire).
+Al utilizar el algoritmo YOLOv8, necesitamos tanto las imágenes para entrenar el modelo cómo la segmentación de estas imágenes para indicar cuál es el target, en este caso, el fuego.
+Para ello, una de las opciones es utilizar un dataset obtenido desde la página [Roboflow](https://universe.roboflow.com/-jwzpw/continuous_fire).
 
 <img src="https://drive.google.com/uc?id=1CCq5_j7wUpI4lIWwtwRNHIPj7MLmnPVK" height="150px">
+
+La otra opción elegida es obtener imagenes mediante Web **Scraping**, en este caso a la página [123rf](https://es.123rf.com/)
+
+Comenzamos importando las librerias necesarias.
+```python
+import requests
+import json
+```
+
+ Hacemos un pedido a la página y guardamos el objeto que nos devuelve.
+```python
+import requests
+
+URL = 'https://es.123rf.com/imagenes-de-archivo/incendios_forestales.html'
+
+respuesta = requests.get(URL)
+
+if respuesta.status_code == 200:
+    print(respuesta.text)
+else:
+    print(f"Error al hacer la solicitud. Código de estado: {respuesta.status_code}")
+```
+
+Instalamos beautifulsoup4.
+```python
+!pip install beautifulsoup4
+```
+
+Creamos un objeto BeautifulSoup para analizar el HTML de la respuesta.
+```python
+from bs4 import BeautifulSoup
+
+sopa_html = BeautifulSoup(respuesta.text, 'html.parser')
+
+print('Tipo de objeto:', type(sopa_html))
+```
+
+Creamos el directorio para almacenar las imágenes.
+```python
+import os
+from urllib.parse import urljoin
+
+directorio_imagenes = 'imagenes'
+os.makedirs(directorio_imagenes, exist_ok=True)
+```
+Buscamos en la sopa html la etiqueta <img> mostramos cuántas imágenes hay.
+```python
+imagenes_fuego = sopa_html.find_all('img')
+
+print('img de incendio:', type(imagenes_fuego))
+print('Longitud:', len(imagenes_fuego))
+```
+```python
+img de incendio: <class 'bs4.element.ResultSet'>
+Longitud: 547
+```
+Obtener la URL base de la página, si la respuesta tiene una URL, usarla, si no, establecer una URL predeterminada 'https://es.123rf.com/'
+```python
+url_base = respuesta.url if respuesta.url else 'https://es.123rf.com/'
+```
+Descargamos las imagenes y las guardamos en un carpeta.
+```python
+from google.colab import files
+# Descargar y guardar cada imagen
+for i, img in enumerate(imagenes_fuego, start=1):
+    # Obtener la URL de la imagen
+    url_imagen = urljoin(url_base, img['src'])
+
+    # Descargar la imagen
+    respuesta_imagen = requests.get(url_imagen)
+
+    # Guardar la imagen en el directorio
+    nombre_archivo = os.path.join(directorio_imagenes, f'imagen_{i}.png')
+    with open(nombre_archivo, 'wb') as archivo:
+        archivo.write(respuesta_imagen.content)
+
+    print(f'Imagen {i} descargada y guardada como {nombre_archivo}')
+
+# Comprimir el directorio en un archivo ZIP
+nombre_archivo_zip = 'imagenes_fuego.zip'
+os.system(f'zip -r {nombre_archivo_zip} {directorio_imagenes}')
+
+# Descargar el archivo ZIP
+files.download(nombre_archivo_zip)
+```
+```python
+# Resultado del scraping:
+Imagen 1 descargada y guardada como imagenes/imagen_1.png
+Imagen 2 descargada y guardada como imagenes/imagen_2.png
+Imagen 3 descargada y guardada como imagenes/imagen_3.png
+...
+Imagen 545 descargada y guardada como imagenes/imagen_545.png
+Imagen 546 descargada y guardada como imagenes/imagen_546.png
+Imagen 547 descargada y guardada como imagenes/imagen_547.png
+Proceso completado. Carpeta comprimida y descargada como "imagenes_fuego.zip".
+```
+Solo queda repetir este proceso con las ditintas páginas hasta conseguir el número de imágenes deseadas.
 
 ## 3. Limpieza de datos. <a name="id3"></a>
 ## 4. Exploración y visualización.<a name="id4"></a>
