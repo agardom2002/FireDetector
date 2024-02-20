@@ -44,7 +44,7 @@
 Este proyecto se basa en un modelo de reconocimiento y segmentación de imágenes en tiempo real entrenado para detectar si hay fuego en la imagen, utiliza un algoritmo llamado YOLO que se centra en este tipo de modelos
 haciendo que sea mucho más veloz y preciso (Enlace a su [GitHub](https://github.com/ultralytics/ultralytics)).
 
-<img src="https://drive.google.com/uc?id=1CURd9SyhdrQgs0kD-ZFQW8m44clrS6bJ" height="600px" width="100%">
+<img src="https://drive.google.com/uc?id=1CURd9SyhdrQgs0kD-ZFQW8m44clrS6bJ" width="100%">
 
 ***Imagen obtenida de la predicción del modelo entrenado.***
 
