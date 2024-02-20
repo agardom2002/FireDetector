@@ -190,7 +190,7 @@ En este ejemplo lo copiamos a nuestro Google Drive con el siguiente comando.
 
 Teniendo la carpeta descargada en nuestro Google Drive podemos ver los diferentes árboles de carpetas que trae.
 
-<img src="Imgs/Carpetas.PNG" height="250px">
+<img src="Imgs/Carpetas.PNG" height="350px" width="100%">
 
 Por un lado, vemos dos README que indican las credenciales del dataset perteneciente a RoboFlow. Además, observamos un archivo **data.yaml**
 que incluye la información sobre las rutas de entrenamiento, prueba y validación así como los distintos targets (en este caso sólo *fire*) y 
