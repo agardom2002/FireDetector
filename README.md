@@ -6,7 +6,7 @@
 
 ✔️[2. Obtención de datos.](#id2)
 
-[3. Limpieza de datos.](#id3) 
+✔️[3. Limpieza de datos.](#id3) 
 
 ✔️[4. Exploración y visualización.](#id4)
 
@@ -156,6 +156,118 @@ Proceso completado. Carpeta comprimida y descargada como "imagenes_fuego.zip".
 Solo queda repetir este proceso con las ditintas páginas hasta conseguir el número de imágenes deseadas.
 
 ## 3. Limpieza de datos. <a name="id3"></a>
+
+Comprobamos cómo están estructurados los archivos. Enlace al [Colab](https://colab.research.google.com/drive/18FPsWTwqpxLTKTJ20FPWeRT8XqzYQ3Td?usp=sharing) correspondiente.
+
+En este dataset estructurado en árboles de carpetas encontramos tres ramas importantes; train, test y valid. En cada una de estas carpetas hay una carpeta que guarda las imágenes y otra que contiene los archivos .txt para indicar la segmentación de la imagen.
+
+Si nos fijamos en la carpeta train, nos damos cuenta las imagenes tienen la misma estructura: [nombre]_png.rf.[identificador].jpg. Además, este identificador lo contiene el mismos archivo .txt asociado a esta imagen en su respectiva carpeta.
+
+Esta información la usaremos para comprobar que cada imagen tenga un label asociado, así como que cada carpeta contenga archivos de extensión correcta (.txt para los labels y .png o .jpg para las imágenes). Si no ocurre esto, se guardará este archivo o carpeta en una nueva carpeta creada para decidir qué hacer con ella.
+
+Pasos a seguir:
+
+Instalamos el paquete **RoboFlow** que es necesario para descargar el dataset.
+
+```python
+!pip install roboflow
+```
+
+Importamos las librerías necesarias para el tratamiento de los datos.
+
+```python
+import os
+import shutil
+
+from roboflow import Roboflow
+```
+
+Utilizando una API de RoboFlow descargamos el dataset necesario.
+
+```python
+rf = Roboflow(api_key="MAiCeSuy58yjlg2ma4QK")
+project = rf.workspace("-jwzpw").project("continuous_fire")
+dataset = project.version(6).download("yolov8")
+```
+
+Creamos el código necesario para verificar que cada imagen tiene al menos un archivo .txt que indicará que tiene una segmentación de imagen indicando que tiene el target (el fuego) aplicado.
+
+```
+# Creamos un array con los nombres de las carpetas a recorrer
+carpetas = ["test", "train", "valid"]
+
+# Inicializamos dos contadores, uno para los archivos correctos y otros para 
+cont = {"test": 0, "train": 0, "valid": 0,}
+
+for nombre in carpetas:
+
+    # Ruta de las carpetas
+    carpeta_images = f"/content/continuous_fire-6/{nombre}/images"
+    carpeta_labels = f"/content/continuous_fire-6/{nombre}/labels"
+
+    # Obtenemos la lista de archivos en ambas carpetas
+    archivos_images = os.listdir(carpeta_images)
+    archivos_labels = os.listdir(carpeta_labels)
+
+    # Inicializamos una lista para guardar los identificadores de los labels
+    identificadores_labels = set()
+
+    for archivo_label in archivos_labels:
+
+        # Si el archivo termina en .txt obtenemos su identificador
+        if archivo_label.endswith(".txt"):
+            identificador = archivo_label.split(".")[-2]
+            identificadores_labels.add(identificador)
+
+        # De lo contrario, guardamos la ruta del archivo y lo almacenamos en otra carpeta
+        else:
+            # Con os.path.join() creamos la ruta del archivo
+            ruta_label = os.path.join(carpeta_labels, archivo_label)
+
+            # Inicializamos la ruta de destino
+            ruta_destino = f"/content/continuous_fire-6/No_Compatibles/{nombre}/"
+
+            print(f"El archivo {archivo_label}, en la carpeta {nombre} no es un archivo .txt.\nSerá enviado a la carpeta {ruta_destino} \n")
+
+            # Mediante un try: , except: verificamos si existe la carpeta de destino y guardamos el archivo.
+            try:
+              os.mkdir(ruta_destino)
+              shutil.move(ruta_label, ruta_destino)
+
+            except:
+              shutil.move(ruta_label, ruta_destino)
+
+    # Comprobamos por cada imagen si tiene un label asociado
+    for archivo_image in archivos_images:
+
+        # Verificamos que el archivo sea .jpg o .png . Si es así guardamos su identificador
+        if archivo_image.endswith(".jpg") or archivo_image.endswith(".png"):
+            identificador = archivo_image.split(".")[-2]
+        else:
+            ruta_imagen = os.path.join(carpeta_images, archivo_image)
+            ruta_destino = f"/content/continuous_fire-6/No_Compatibles/{nombre}/"
+
+            print(f"El archivo {archivo_image}, en la carpeta {nombre} no es un archivo .jpg o .png.\nSerá enviado a la carpeta {ruta_destino} \n")
+
+            try:
+              os.mkdir(ruta_destino)
+              shutil.move(ruta_imagen, ruta_destino)
+
+            except:
+              shutil.move(ruta_imagen, ruta_destino)
+
+        # Verificar si existe un archivo con el mismo identificador en la carpeta "labels"
+        if identificador in identificadores_labels:
+            cont[nombre] += 1
+        else:
+            print(f"La imagen con identificador {identificador} no tiene un archivo en la carpeta 'labels' en {nombre}. Eliminando la imagen... \n")
+            ruta_imagen = os.path.join(carpeta_images, archivo_image)
+            os.remove(ruta_imagen)
+
+for nombre in carpetas:
+  print(f"Número de imágenes en la carpeta {nombre:5} con label asociado: {cont[nombre]}")
+```
+
 ## 4. Exploración y visualización.<a name="id4"></a>
 
 Para descargar el dataset de imágenes para entrenar el modelo podemos usar los siguientes comandos:
