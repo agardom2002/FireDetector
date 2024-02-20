@@ -201,7 +201,7 @@ en archivos **.txt** las coordenadas de la segmentación de la imagen que indica
 
 Primero vemos la carpeta con las imágenes de entrenamiento:
 
-<img src="Imgs/Train-Images.PNG" height="250px">
+<img src="Imgs/Train-Images.PNG" height="350px" width="100%">
 
 Ahora vemos la carpeta con las coordenadas de cada imagen:
 
