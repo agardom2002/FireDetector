@@ -99,7 +99,7 @@ from urllib.parse import urljoin
 directorio_imagenes = 'imagenes'
 os.makedirs(directorio_imagenes, exist_ok=True)
 ```
-Buscamos en la sopa html la etiqueta <img> mostramos cuántas imágenes hay.
+Buscamos en la sopa html la etiqueta <img> y mostramos cuántas imágenes hay.
 ```python
 imagenes_fuego = sopa_html.find_all('img')
 
