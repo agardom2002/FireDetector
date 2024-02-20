@@ -192,7 +192,7 @@ dataset = project.version(6).download("yolov8")
 
 Creamos el código necesario para verificar que cada imagen tiene al menos un archivo .txt que indicará que tiene una segmentación de imagen indicando que tiene el target (el fuego) aplicado.
 
-```
+```python
 # Creamos un array con los nombres de las carpetas a recorrer
 carpetas = ["test", "train", "valid"]
 
@@ -227,7 +227,8 @@ for nombre in carpetas:
             # Inicializamos la ruta de destino
             ruta_destino = f"/content/continuous_fire-6/No_Compatibles/{nombre}/"
 
-            print(f"El archivo {archivo_label}, en la carpeta {nombre} no es un archivo .txt.\nSerá enviado a la carpeta {ruta_destino} \n")
+            print(f"""El archivo {archivo_label}, en la carpeta {nombre} no es un archivo .txt.\n
+Será enviado a la carpeta {ruta_destino} \n""")
 
             # Mediante un try: , except: verificamos si existe la carpeta de destino y guardamos el archivo.
             try:
@@ -247,7 +248,8 @@ for nombre in carpetas:
             ruta_imagen = os.path.join(carpeta_images, archivo_image)
             ruta_destino = f"/content/continuous_fire-6/No_Compatibles/{nombre}/"
 
-            print(f"El archivo {archivo_image}, en la carpeta {nombre} no es un archivo .jpg o .png.\nSerá enviado a la carpeta {ruta_destino} \n")
+            print(f"""El archivo {archivo_image}, en la carpeta {nombre} no es un archivo .jpg o .png.\n
+Será enviado a la carpeta {ruta_destino} \n""")
 
             try:
               os.mkdir(ruta_destino)
@@ -260,7 +262,8 @@ for nombre in carpetas:
         if identificador in identificadores_labels:
             cont[nombre] += 1
         else:
-            print(f"La imagen con identificador {identificador} no tiene un archivo en la carpeta 'labels' en {nombre}. Eliminando la imagen... \n")
+            print(f"""La imagen con identificador {identificador} no tiene un archivo en la carpeta 'labels' en {nombre}.
+Eliminando la imagen... \n""")
             ruta_imagen = os.path.join(carpeta_images, archivo_image)
             os.remove(ruta_imagen)
 
