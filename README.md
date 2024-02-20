@@ -154,6 +154,62 @@ Solo queda repetir este proceso con las ditintas páginas hasta conseguir el nú
 
 ## 3. Limpieza de datos. <a name="id3"></a>
 ## 4. Exploración y visualización.<a name="id4"></a>
+
+Para descargar el dataset de imágenes para entrenar el modelo podemos usar los siguientes comandos:
+
+- Instalamos los paquetes necesarios e importamos las librerías.
+```python
+
+!pip install ultralytics==8.0.196
+!pip install roboflow
+
+import ultralytics
+from roboflow import Roboflow
+from ultralytics import YOLO
+
+```
+
+- Descargamos los datos desde la página de **Roboflow**.
+
+```python
+
+import ultralytics
+from roboflow import Roboflow
+from ultralytics import YOLO
+
+```
+
+En este ejemplo lo copiamos a nuestro Google Drive con el siguiente comando.
+
+```python
+
+!cp -r /content/continuous_fire-6 /content/drive/MyDrive/Data-FireDetector
+
+```
+
+Teniendo la carpeta descargada en nuestro Google Drive podemos ver los diferentes árboles de carpetas que trae.
+
+<img src="Imgs/Carpetas.PNG" height="250px">
+
+Por un lado, vemos dos README que indican las credenciales del dataset perteneciente a RoboFlow. Además, observamos un archivo **data.yaml**
+que incluye la información sobre las rutas de entrenamiento, prueba y validación así como los distintos targets (en este caso sólo *fire*) y 
+algunas credenciales de RoboFlow.
+
+Por otro lado, encontramos tres carpetas, cada una con otras dos carpetas en su interior, una que guarda las imágenes y otra que contiene
+en archivos **.txt** las coordenadas de la segmentación de la imagen que indica qué es el objetivo.
+
+Primero vemos la carpeta con las imágenes de entrenamiento:
+
+<img src="Imgs/Train-Images.PNG" height="250px">
+
+Ahora vemos la carpeta con las coordenadas de cada imagen:
+
+<img src="Imgs/Train-Labels.PNG" height="250px">
+
+Si abrimos uno de estos documentos observamos las coordenadas de uno de los segmentos:
+
+<img src="Imgs/Label.PNG" height="100px">
+
 ## 5. Preparación de los datos para los algoritmos de Machine Learning.<a name="id5"></a>
 
 Si queremos segmentar imágenes manualmente para añadirlas al dataset podemos instalar en nuestro equipo **labelme**. En este caso lo hemos instalado y utilizado con Visual Studio Code.
