@@ -238,7 +238,7 @@ labelme2yolo --json_dir "Ruta de la carpeta con las imágenes"
 Se puede observar que al ejecutar la transformación se genera una carpeta que prepara el dataset para el entrenamiento, separa por un lado las imágenes de los archivos .json asociados. Además,
 crea un archivo **dataset.yaml** que será el que utilizaremos para realizar el entrenamiento.
 
-<img src="https://drive.google.com/uc?id=1qTqUW3hMEv5jayhPxI3plWtiEEChNsSe" height="500px" width="100%">
+<img src="https://drive.google.com/uc?id=1qTqUW3hMEv5jayhPxI3plWtiEEChNsSe" height="500px" width="300px">
 
 ## 6. Entrenamiento del modelo y comprobación del rendimiento.<a name="id6"></a>
 
