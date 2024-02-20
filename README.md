@@ -4,7 +4,7 @@
 ## Índice
 ✔️[1. Justificación y descripción del proyecto.](#id1)
 
-[2. Obtención de datos.](#id2)
+✔️[2. Obtención de datos.](#id2)
 
 [3. Limpieza de datos.](#id3) 
 
