@@ -8,7 +8,7 @@
 
 [3. Limpieza de datos.](#id3) 
 
-[4. Exploración y visualización.](#id4)
+✔️[4. Exploración y visualización.](#id4)
 
 ✔️[5. Preparación de los datos para los algoritmos de Machine Learning.](#id5)
 
@@ -19,6 +19,8 @@
 [8. Aplicación web.](#id8)
 
 [9. Conclusiones.](#id9)
+
+[10. Bibliografía.](#id10)
 
 ## 1. Justificación y descripción del proyecto.<a name="id1"></a>
 
@@ -400,6 +402,9 @@ cv2.destroyAllWindows()
 <img src="https://drive.google.com/uc?id=1_5lwt27E4EZv9bmMecJ-FGSGsvxjMWQo" width="100%">
 
 ## 7. NPL<a name="id7"></a>
+
 ## 8. Aplicación web.<a name="id8"></a>
 
 ## 9. Conclusiones.<a name="id9"></a>
+
+## 10. Bibliografía.<a name="id10"></a>
