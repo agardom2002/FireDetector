@@ -14,7 +14,7 @@
 
 ✔️[6. Entrenamiento del modelo y comprobación del rendimiento.](#id6)
 
-[7. NPL](#id7)
+[7. NPL.](#id7)
 
 [8. Aplicación web.](#id8)
 
@@ -250,30 +250,31 @@ Enlace al entrenamiento en un documento de [Google Colab](https://colab.research
 
 Instalación de los paquetes necesarios:
 
-* **ultralytics:** Para obtener y entrenar el modelo
-* **roboflow:** Para descargar el dataset de imágenes para el entrenamiento
+* **ultralytics:** Para obtener y entrenar el modelo.
+* **roboflow:** Para descargar el dataset de imágenes para el entrenamiento.
 
 ```python
 !pip install ultralytics==8.0.196
 !pip install roboflow
 ```
-Importamos las librerías necesarias tanto para descargar el dataset como para entrenar el modelo
+
+Importamos las librerías necesarias tanto para descargar el dataset como para entrenar el modelo.
 
 ```python
 import ultralytics
 from roboflow import Roboflow
 from ultralytics import YOLO
 ```
-Descargamos el dataset de imágenes. Para ello usamos la API proporcionada de Roboflow
+Descargamos el dataset de imágenes. Para ello usamos la API proporcionada de Roboflow.
 
 ```python
 rf = Roboflow(api_key="MAiCeSuy58yjlg2ma4QK")
 project = rf.workspace("-jwzpw").project("continuous_fire")
 dataset = project.version(6).download("yolov8")
 ```
-Comando para realizar el entrenamiento del modelo
+Comando para realizar el entrenamiento del modelo.
 
-Los diferentes parámetros que se usan son :
+Los diferentes parámetros que se usan son:
 
 - **task**: Sirve para indicar la tarea a realizar.
   - detect: Consiste en detectar objetos en una imagen o video, dibujando cuadros a su alrededor calificándolos según sus características. Puede detectar varios objetos a la vez.
@@ -306,18 +307,23 @@ Para yolov8 hay diferentes variantes; **n** (nano), **s** (small), **m** (medium
 ```python
 !yolo task=detect mode=train model=yolov8s.pt data=/content/continuous_fire-6/data.yaml epochs=80 imgsz=640 plots=True
 ```
-Forma para descargar la carpeta runs de forma local en nuestro equipo
+
+Forma para descargar la carpeta runs de forma local en nuestro equipo.
 
 ```python
 from google.colab import files
 files.download('/content/runs')
 ```
-Montar nuestro Google Drive
+
+Montar nuestro Google Drive.
+
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
 ```
-Copiamos la carpeta runs a un directorio de nuestro Google Drive
+
+Copiamos la carpeta runs a un directorio de nuestro Google Drive.
+
 ```python
 !cp -r /content/runs /content/drive/MyDrive/runs
 ```
@@ -341,11 +347,11 @@ Tras terminar el entrenamiento vemos un resumen de las iteraciones que ha realiz
 
 Por otro lado, podemos ver una foto generada por el propio modelo dónde nos muestra diferentes gráficas con los resultados.
 
-<img src="https://drive.google.com/uc?id=1PiJosQad5XwGDBrLuDIV-OTLPDthrTN3" width="100%">
+<img src="Imgs/results.png" width="100%">
 
 Observamos la matriz de confusión y nos aseguramos de que no detecta el fondo como fuego y viceversa.
 
-<img src="https://drive.google.com/uc?id=11DGOclWTlVWHeLv-AB8nnOcpaDvlsyO4" width="100%">
+<img src="Imgs/confusion_matrix.png" width="100%">
 
 ### Comprobación en local con cámara
 
@@ -399,9 +405,9 @@ cv2.destroyAllWindows()
 
 **Resultados cámara local**
 
-<img src="https://drive.google.com/uc?id=1_5lwt27E4EZv9bmMecJ-FGSGsvxjMWQo" width="100%">
+<img src="prueba_camara.PNG" width="100%">
 
-## 7. NPL<a name="id7"></a>
+## 7. NPL.<a name="id7"></a>
 
 ## 8. Aplicación web.<a name="id8"></a>
 
