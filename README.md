@@ -57,7 +57,7 @@ Para ello, una de las opciones es utilizar un dataset obtenido desde la página 
 
 <img src="Imgs/dataset.PNG" width="100%">
 
-La otra opción elegida es obtener imagenes mediante Web **Scraping**, en este caso a la página [123rf](https://es.123rf.com/).
+La otra opción elegida es obtener imágenes mediante Web **Scraping**, en este caso a la página [123rf](https://es.123rf.com/).
 El Scraping se ha realizado en el siguente documento de [Google Colab](https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing).
 
 Comenzamos importando las librerias necesarias.
@@ -117,7 +117,7 @@ Obtener la URL base de la página, si la respuesta tiene una URL, usarla, si no,
 ```python
 url_base = respuesta.url if respuesta.url else 'https://es.123rf.com/'
 ```
-Descargamos las imagenes y las guardamos en un carpeta.
+Descargamos las imágenes y las guardamos en un carpeta.
 ```python
 from google.colab import files
 # Descargar y guardar cada imagen
@@ -144,11 +144,11 @@ files.download(nombre_archivo_zip)
 ```
 ```
 # Resultado del scraping:
-Imagen 1 descargada y guardada como imagenes/imagen_1.png
-Imagen 2 descargada y guardada como imagenes/imagen_2.png
-Imagen 3 descargada y guardada como imagenes/imagen_3.png
+Imagen 1 descargada y guardada como imágenes/imagen_1.png
+Imagen 2 descargada y guardada como imágenes/imagen_2.png
+Imagen 3 descargada y guardada como imágenes/imagen_3.png
 ...
-Imagen 545 descargada y guardada como imagenes/imagen_545.png
+Imagen 545 descargada y guardada como imágenes/imagen_545.png
 Imagen 546 descargada y guardada como imagenes/imagen_546.png
 Imagen 547 descargada y guardada como imagenes/imagen_547.png
 Proceso completado. Carpeta comprimida y descargada como "imagenes_fuego.zip".
