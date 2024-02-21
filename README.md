@@ -470,12 +470,12 @@ Observamos la matriz de confusión y nos aseguramos de que no detecta el fondo c
 
 Además, Yolo nos genera otras gráficas como la matriz de correlación sobre la **anchura** y **altura** de la zona detectada con las coordenadas **(x, y)** de esta segmentación.
 
-<img src="Imgs/labels_correlacion.png" width="100%">
+<img src="Imgs/labels_correlacion.jpg" width="100%">
 
 Por último, podemos ver otras gráficas como la frecuencia con la que se repiten ciertas coordenadas de segmentación de imagen, así como su anchura y altura. 
 También nos muestra gráficas directamente con la sección de detección en rojo, indicando con mayor intensidad donde más se repite.
 
-<img src="Imgs/grafica_labels.png" width="100%">
+<img src="Imgs/grafica_labels.jpg" width="100%">
 
 ### Comprobación en local con cámara
 
