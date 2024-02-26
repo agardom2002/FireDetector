@@ -545,6 +545,8 @@ cv2.destroyAllWindows()
 
 **Web de imágenes - 123rf:** https://es.123rf.com/
 
+**Web Imagenes - RoboFlow:** https://universe.roboflow.com/-jwzpw/continuous_fire
+
 **Google Colab - Scraping Web:** https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing
 
 **Google Colab - Limpieza de datos:** https://colab.research.google.com/drive/18FPsWTwqpxLTKTJ20FPWeRT8XqzYQ3Td?usp=sharing)
@@ -556,3 +558,4 @@ cv2.destroyAllWindows()
 **Tutorial - Entrenar modelo YOLO:** https://www.youtube.com/watch?v=rk7zOBRJWCc
 
 **Tutorial - Webcam Streamlit:** https://medium.com/mlearning-ai/live-webcam-with-streamlit-f32bf68945a4
+
