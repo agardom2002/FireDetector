@@ -1,5 +1,5 @@
 # Fire Detector
-<img src="Imgs/LogoFireDetectorDerecha.png" height="100%" width="100%">
+<img src="Imgs/LogoFireDetectorDerecha.png" height="400" width="300%">
 
 ***Proyecto realizado por [Alejandro Fernández Romero](https://github.com/AlexFdezRomero) y [Andrés García Domínguez](https://github.com/agardom2002).***
 
