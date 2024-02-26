@@ -541,9 +541,9 @@ cv2.destroyAllWindows()
 
 ## 10. Bibliografía.<a name="id10"></a>
 
-**GitHub ultralytics: https:** https://github.com/ultralytics/ultralytics
+**GitHub - Ultralytics: https:** https://github.com/ultralytics/ultralytics
 
-**Web de imágenes 123rf:** https://es.123rf.com/
+**Web de imágenes - 123rf:** https://es.123rf.com/
 
 **Google Colab - Scraping Web:** https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing
 
