@@ -540,3 +540,5 @@ cv2.destroyAllWindows()
 ## 9. Conclusiones.<a name="id9"></a>
 
 ## 10. Bibliografía.<a name="id10"></a>
+
+ultralytics: (https://github.com/ultralytics/ultralytics)
