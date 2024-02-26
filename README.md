@@ -545,12 +545,12 @@ GitHub ultralytics: https://github.com/ultralytics/ultralytics
 
 Web de imágenes 123rf: https://es.123rf.com/
 
-Google Colab Scraping Web https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing
+Google Colab - Scraping Web https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing
 
-Google Colab Limpieza de datos: https://colab.research.google.com/drive/18FPsWTwqpxLTKTJ20FPWeRT8XqzYQ3Td?usp=sharing)
+Google Colab - Limpieza de datos: https://colab.research.google.com/drive/18FPsWTwqpxLTKTJ20FPWeRT8XqzYQ3Td?usp=sharing)
 
-Google Colab Entrenamiennto: https://colab.research.google.com/drive/1mmFQI4K9Ic9whAI8TFCMuOtnLl3uUM4S?usp=sharing
+Google Colab - Entrenamiennto: https://colab.research.google.com/drive/1mmFQI4K9Ic9whAI8TFCMuOtnLl3uUM4S?usp=sharing
 
-Tutorial Mandar correo desde Python: https://www.youtube.com/watch?v=oPAo8Hh8bj0
+Tutorial - Mandar correo desde Python: https://www.youtube.com/watch?v=oPAo8Hh8bj0
 
-Tutorial entrenar modelo YOLO: https://www.youtube.com/watch?v=rk7zOBRJWCc
+Tutorial - Entrenar modelo YOLO: https://www.youtube.com/watch?v=rk7zOBRJWCc
