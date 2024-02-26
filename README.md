@@ -541,6 +541,8 @@ cv2.destroyAllWindows()
 
 ## 10. Bibliografía.<a name="id10"></a>
 
+Recopilación de todos los recursos utilizados, algunos se encuentran a lo largo del **README**.
+
 **GitHub - Ultralytics: https:** https://github.com/ultralytics/ultralytics
 
 **Web de imágenes - 123rf:** https://es.123rf.com/
