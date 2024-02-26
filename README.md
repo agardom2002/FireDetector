@@ -1,4 +1,6 @@
 # Fire Detector
+<img src="Imgs/LogoFireDetector.png" height="600" width="100%">
+
 ***Proyecto realizado por [Alejandro Fernández Romero](https://github.com/AlexFdezRomero) y [Andrés García Domínguez](https://github.com/agardom2002).***
 
 ## Índice
