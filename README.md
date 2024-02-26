@@ -545,7 +545,7 @@ cv2.destroyAllWindows()
 
 **Web de imágenes - 123rf:** https://es.123rf.com/
 
-**Web Imagenes - RoboFlow:** https://universe.roboflow.com/-jwzpw/continuous_fire
+**Web Imágenes - RoboFlow:** https://universe.roboflow.com/-jwzpw/continuous_fire
 
 **Google Colab - Scraping Web:** https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing
 
