@@ -714,7 +714,7 @@ def validar_correo(email):
 
 La web se ha realizado en Streamlit.
 
-El enlace a la Web es el siguente: [🔥FireDetector🔥](https://firedetector-tfm.streamlit.app/)
+El enlace a la Web es el siguente: [🔥FireDetector🔥](https://firedetector-tfm.streamlit.app/).
 
 A continuación tenemos el app.py usado para crear la web en Streamlit.
 ```python
