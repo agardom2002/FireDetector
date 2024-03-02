@@ -5,9 +5,7 @@ opencv-contrib-python-headless
 av
 streamlit-mic-recorder
 gTTS
-
 numpy
 opencv-python
-
 nltk
 unidecode
