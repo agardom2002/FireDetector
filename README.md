@@ -20,7 +20,7 @@
 
 [8. Aplicación web.](#id8)
 
-[9. Conclusiones.](#id9)
+✔️[9. Conclusiones.](#id9)
 
 [10. Bibliografía.](#id10)
 
@@ -534,6 +534,58 @@ cv2.destroyAllWindows()
 <img src="Imgs/prueba_camara.PNG" width="100%">
 
 ## 7. NPL.<a name="id7"></a>
+
+Para este apartado hemos decidido añadir tres funcionalidades:
+
+- **Reconocimiento de voz:** Botón en la página web que nos detecta el micrófono y que, al reconocer en el audio uno de los apartados de la página no llevará a este.
+
+- **Alarma sonora:** En el apartado *Alarma*, si al tomar una foto se detecta fuego, sonará una voz (en diferentes idiomas según configuración) avisando del fuego.
+
+- **Verificación de correo electrónico:** El usuario podrá introducir un correo electrónico para que, al detectar fuego al tomar una imagen.
+
+### 7.1 Reconocimiento de voz
+
+Creamos un botón en la página web que detecte el micrófono del usuario. Al pulsarlo nos reconocerá la voz hasta que lo volvamos a pulsar. 
+
+<img src="" width="100%">
+
+Una vez reconoce la voz se realiza el procesamiento del lenguaje necesario para:
+
+- Convertir el texto a minúsculas.
+  
+- Eliminar las tildes.
+  
+- Tokenizar el texto.
+  
+- Eliminar las stop words.
+
+```python
+def procesar_texto(texto):
+    # Convertir a minúsculas
+    texto = texto.lower()
+    
+    # Eliminar tildes
+    texto = unidecode.unidecode(texto)
+    
+    # Tokenización
+    tokens = word_tokenize(texto)
+    
+    # Eliminar stopwords
+    stop_words = set(stopwords.words('spanish'))
+    tokens = [word for word in tokens if word not in stop_words]
+
+    # Comprobamos si alguno de los tokens coincide con uno de los apartados
+    for token in tokens:
+        if token in pre_titles:
+            # Si uno de los tokens coincide devolvemos esta palabra
+            return token
+    
+    # Unir tokens en un solo string
+    processed_text = ' '.join(tokens)
+
+    # Si ningun token coincide devolvemos todo el texto procesado
+    return processed_text
+```
 
 ## 8. Aplicación web.<a name="id8"></a>
 
