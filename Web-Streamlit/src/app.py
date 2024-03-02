@@ -279,10 +279,10 @@ def tab_alarma():
         if env_mail:
     
             if state.email:
-                try: 
+                #try: 
                     enviar_correo(state.email)
-                except:
-                    st.error("Error al enviar correo electrónico", icon="🚨")
+                #except:
+                 #   st.error("Error al enviar correo electrónico", icon="🚨")
             else: 
                 st.error("Debe introducir un correo electrónico", icon="🚨")
 
