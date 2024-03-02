@@ -611,7 +611,7 @@ Recopilación de todos los recursos utilizados, algunos se encuentran a lo largo
 
 **Google Colab - Scraping Web:** https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing
 
-**Google Colab - Limpieza de datos:** https://colab.research.google.com/drive/18FPsWTwqpxLTKTJ20FPWeRT8XqzYQ3Td?usp=sharing)
+**Google Colab - Limpieza de datos:** https://colab.research.google.com/drive/18FPsWTwqpxLTKTJ20FPWeRT8XqzYQ3Td?usp=sharing
 
 **Google Colab - Entrenamiennto:** https://colab.research.google.com/drive/1mmFQI4K9Ic9whAI8TFCMuOtnLl3uUM4S?usp=sharing
 
