@@ -579,6 +579,8 @@ nltk.download('punkt')
 nltk.download('stopwords')
 ```
 
+Definicmos la función para procesar el texto.
+
 ```python
 def procesar_texto(texto):
     # Convertir a minúsculas
@@ -614,7 +616,14 @@ Cuando al tomar una foto se detecte fuego sonará una voz avisando de este.
 Paquetes necesarios:
 
 ```python
+gTTS
+```
 
+Librerías:
+
+```python
+import base64
+from gtts import gTTS
 ```
 
 Empezamos declarando la función para pasar texto a audio.
