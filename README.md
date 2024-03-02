@@ -726,7 +726,7 @@ Atentamente - Andrés García y Alejandro Fernández
 
 Recopilación de todos los recursos utilizados, algunos se encuentran a lo largo del **README**.
 
-**Web Streamlit:** [https://medium.com/mlearning-ai/live-webcam-with-streamlit-f32bf68945a4](https://firedetector-tfm.streamlit.app/)
+**Web Streamlit - FireDetector:** https://firedetector-tfm.streamlit.app
 
 **GitHub - Ultralytics: https:** https://github.com/ultralytics/ultralytics
 
