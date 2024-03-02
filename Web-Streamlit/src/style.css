@@ -1,0 +1,52 @@
+div[data-testid="stAppViewBlockContainer"] > div:first-of-type {
+  background-color: rgb(255, 255, 255, 0.9 );
+  border-radius: 50px;
+  border: solid;
+  border-color: #BD4043;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 4rem;
+}
+
+.st-emotion-cache-sh2krr{
+  font-size: 20px;
+}
+  
+.t-emotion-cache-bcargt{
+  color: white !important;
+}
+
+ [data-testid="stAppViewContainer"] > .main {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/023/838/895/original/tongues-of-fire-background-for-decoration-png.png");
+        background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
+        background-position: center;  
+        background-repeat: no-repeat;
+    }
+
+h1, h2, h3, h4{
+  color: black;
+}
+
+p {
+  color: black;
+  font-size: 20px !important;
+}
+
+.st-emotion-cache-8ijwm3 { 
+  background-color: rgb(255, 255, 255);
+  border: 1px solid;
+  border-color: black;
+}
+
+.st-emotion-cache-8ijwm3:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid;
+  border-color:  #BD4043;
+  color:  #BD4043;
+}
+
+.st-emotion-cache-183lzff {
+    color: black;
+}
+
+section.main > div {max-width:70rem}
