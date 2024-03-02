@@ -12,7 +12,7 @@ import streamlit as st
 from gtts import gTTS
 from ultralytics import YOLO
 from nltk.corpus import stopwords
-from Web-Streamlit.src.MandarCorreo import enviar_correo
+from src.MandarCorreo import enviar_correo
 from nltk.tokenize import word_tokenize
 from streamlit_mic_recorder import mic_recorder, speech_to_text
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
