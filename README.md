@@ -547,7 +547,7 @@ Para este apartado hemos decidido añadir tres funcionalidades:
 
 Creamos un botón en la página web que detecte el micrófono del usuario. Al pulsarlo nos reconocerá la voz hasta que lo volvamos a pulsar. 
 
-<img src="Imgs/Asistente-Virtual.PNG" width="100%">
+<img src="Imgs/Asistente-Virtual.PNG" width="50%">
 
 Una vez reconoce la voz se realiza el procesamiento del lenguaje necesario para:
 
