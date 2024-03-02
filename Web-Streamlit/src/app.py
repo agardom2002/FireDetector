@@ -333,7 +333,7 @@ for title in tab_titles:
 def main():
     
     # Logo
-    st.image("Imgs/LogoFireDetector.png", width=350)
+    st.image("Imgs/LogoFireDetectorDerecha.png", width=350)
 
     # Cabecera
     st.title("Fire Detector")
