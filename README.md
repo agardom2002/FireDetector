@@ -18,11 +18,11 @@
 
 ✔️[7. NPL.](#id7)
 
-[8. Aplicación web.](#id8)
+✔️[8. Aplicación web.](#id8)
 
 ✔️[9. Conclusiones.](#id9)
 
-[10. Bibliografía.](#id10)
+✔️[10. Bibliografía.](#id10)
 
 ## 1. Justificación y descripción del proyecto.<a name="id1"></a>
 
