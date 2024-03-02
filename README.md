@@ -547,7 +547,7 @@ Para este apartado hemos decidido añadir tres funcionalidades:
 
 Creamos un botón en la página web que detecte el micrófono del usuario. Al pulsarlo nos reconocerá la voz hasta que lo volvamos a pulsar. 
 
-<img src="" width="100%">
+<img src="Imgs/Asistente-Virtual.PNG" width="100%">
 
 Una vez reconoce la voz se realiza el procesamiento del lenguaje necesario para:
 
@@ -558,6 +558,26 @@ Una vez reconoce la voz se realiza el procesamiento del lenguaje necesario para:
 - Tokenizar el texto.
   
 - Eliminar las stop words.
+
+Instalamos los paquetes necesarios:
+
+```python
+!pip install nltk
+!pip install unidecode
+```
+
+Importamos las librerías a utilizar:
+
+```python
+import nltk
+import unidecode
+
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+nltk.download('punkt')
+nltk.download('stopwords')
+```
 
 ```python
 def procesar_texto(texto):
@@ -585,6 +605,100 @@ def procesar_texto(texto):
 
     # Si ningun token coincide devolvemos todo el texto procesado
     return processed_text
+```
+
+### 7.2 Alarma sonora
+
+Cuando al tomar una foto se detecte fuego sonará una voz avisando de este.
+
+Paquetes necesarios:
+
+```python
+
+```
+
+Empezamos declarando la función para pasar texto a audio.
+
+```python
+# Pasar de texto a audio
+# Parametros:
+# - text: Texto para pasar a audio
+# - lang: Idioma con el que convertir el texto 
+# - slow: Indicar la velocidad de reproduccion del audio
+def text_to_speech(text, lang='en', slow=False):
+    tts = gTTS(text=text, lang=lang, slow=slow)
+    return tts
+```
+
+También declaramos la función que reproducirá el audio automáticamente.
+
+```python
+# Función para reproducir el audio de manera automatica
+def autoplay_audio(ruta_archivo: str):
+    # Abrimos el archivo en modo lectura binaria
+    with open(ruta_archivo, "rb") as archivo:
+        # Leemos los datos y los guardamos en una variable
+        data = archivo.read()
+        # Codificamos los datos en base64 para insertarlo en HTML
+        b64 = base64.b64encode(data).decode()
+        # Codigo HTML para reproducir de forma automatica el audio
+        md = f"""
+            <audio controls autoplay="true" style="display:none">
+            <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
+            </audio>
+            """
+        
+        # Mediante markdown lo introducimos en la página para que se ejecute
+        st.markdown(
+            md,
+            unsafe_allow_html=True,
+        )
+```
+
+Los distintos idiomas que hemos implementado son:
+
+```python
+LANGUAGES = {
+    'English': 'en',
+    'Spanish': 'es',
+    'French': 'fr',
+    'German': 'de',
+    'Italian': 'it',
+}
+```
+
+Las frases según el idioma seleccionado son:
+
+```python
+texto_audio = {"es": "ALERTA! FUEGO DETECTADO!",
+               "en": "Alert, fire detected",
+               "fr": "Alerte, incendie détecté",
+               "de": "Alarm, Feuer erkannt",
+               "it": "Allerta, rilevato incendio"}
+```
+
+### 7.3 Verificación de correo electrónico
+
+Para verificar que el usuario ha introducido un correo electrónico válido usamos una expresión regular.
+
+Importamos la librería **re**.
+
+```python
+import re
+```
+
+Creamos la función para comprobar el email.
+
+```python
+def validar_correo(email):
+    # Expresión regular para validar correo electrónico
+    regex = r'^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+    
+    # Validar el correo con la expresión regular
+    if re.match(regex, email):
+        return True
+    else:
+        return False
 ```
 
 ## 8. Aplicación web.<a name="id8"></a>
