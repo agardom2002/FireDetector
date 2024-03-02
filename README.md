@@ -712,9 +712,11 @@ def validar_correo(email):
 
 ## 8. Aplicación web.<a name="id8"></a>
 
-A continuación tenemos el app.py usado para crear la web en Streamlit.
+La web se ha realizado en Streamlit.
 
-En enlace a la Web es el siguente: [🔥FireDetector🔥](https://firedetector-tfm.streamlit.app/)
+El enlace a la Web es el siguente: [🔥FireDetector🔥](https://firedetector-tfm.streamlit.app/)
+
+A continuación tenemos el app.py usado para crear la web en Streamlit.
 ```python
 import av
 import os
