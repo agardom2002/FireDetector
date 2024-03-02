@@ -30,7 +30,7 @@ def local_css(file_name):
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 # Llamamos a la funcion (local_css) para cargar el archivo CSS
-local_css("src/style.css")
+local_css("Web-Streamlit/src/style.css")
 
 # Cambiamos los estilos de los botones
 st.markdown(
@@ -50,7 +50,7 @@ st.markdown(
 # -- INICIALIZACION DE VARIABLES --
 
 # Cargamos el modelo de detección de fuego
-model = YOLO("model/best.pt")
+model = YOLO("Web-Streamlit/model/best.pt")
 
 # Diccionario para los idiomas
 LANGUAGES = {
