@@ -16,7 +16,7 @@
 
 ✔️[6. Entrenamiento del modelo y comprobación del rendimiento.](#id6)
 
-[7. NPL.](#id7)
+✔️[7. NPL.](#id7)
 
 [8. Aplicación web.](#id8)
 
