@@ -317,13 +317,17 @@ def procesar_texto(texto):
     # Eliminar stopwords
     stop_words = set(stopwords.words('spanish'))
     tokens = [word for word in tokens if word not in stop_words]
+
+    # Comprobamos para cada token si coincide con uno de los apartados
     for token in tokens:
         if token in pre_titles:
+            # Si coincide devolvemos el token
             return token
     
     # Unir tokens en un solo string
     processed_text = ' '.join(tokens)
-    
+
+    # Si ningun token coincide devolvemos el texto procesado
     return processed_text
 
 for title in tab_titles:
