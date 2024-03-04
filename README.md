@@ -445,7 +445,7 @@ Copiamos la carpeta runs a un directorio de nuestro Google Drive.
 !cp -r /content/runs /content/drive/MyDrive/runs
 ```
 
-Tras terminar el entrenamiento vemos un resumen de las iteraciones que ha realizado. Nos fijamos que el modelo con mayor precisión es del 88,31%.
+Tras terminar el entrenamiento vemos un resumen de las iteraciones que ha realizado. Nos fijamos que el modelo ha alcanzado una precisión del 88,31%.
 
 | **epoch** | **train/box_loss** | **train/cls_loss** | **train/dfl_loss** | **metrics/precision(B)** | **metrics/recall(B)** | **metrics/mAP50(B)** | **metrics/mAP50-95(B)** | **val/box_loss** | **val/cls_loss** | **val/dfl_loss** | **lr/pg0** | **lr/pg1** | **lr/pg2** |
 |-----------|--------------------|--------------------|--------------------|--------------------------|-----------------------|----------------------|-------------------------|------------------|------------------|------------------|------------|------------|------------|
