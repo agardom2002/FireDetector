@@ -64,7 +64,7 @@ Para ello, una de las opciones es utilizar un dataset obtenido desde la página 
 
 <img src="Imgs/dataset.PNG" width="100%">
 
-La otra opción elegida es obtener imágenes mediante Web **Scraping**, en este caso a la página [123rf](https://es.123rf.com/).
+La otra opción elegida es obtener imágenes mediante **Web Scraping**, en este caso a la página [123rf](https://es.123rf.com/).
 El Scraping se ha realizado en el siguente documento de [Google Colab](https://colab.research.google.com/drive/1MlYd4HSEIYstt9NFaYdvWlkac5OANCQ2?usp=sharing).
 
 Comenzamos importando las librerias necesarias.
