@@ -554,7 +554,7 @@ Para este apartado hemos decidido añadir tres funcionalidades:
 
 - **Alarma sonora:** En el apartado *Alarma*, si al tomar una foto se detecta fuego, sonará una voz (en diferentes idiomas según configuración) avisando del fuego.
 
-- **Verificación de correo electrónico:** El usuario podrá introducir un correo electrónico para que, al detectar fuego al tomar una imagen.
+- **Verificación de correo electrónico:** El usuario podrá introducir un correo electrónico para que reciba un aviso al detectar fuego en una imagen.
 
 ### 7.1 Reconocimiento de voz
 
