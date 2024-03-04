@@ -387,7 +387,7 @@ import ultralytics
 from roboflow import Roboflow
 from ultralytics import YOLO
 ```
-Descargamos el dataset de imágenes. Para ello usamos la API proporcionada de Roboflow.
+Descargamos el dataset de imágenes. Para ello usamos la API proporcionada por Roboflow.
 
 ```python
 rf = Roboflow(api_key="MAiCeSuy58yjlg2ma4QK")
