@@ -1153,6 +1153,8 @@ Atentamente - Andrés García y Alejandro Fernández
 
 Recopilación de todos los recursos utilizados, algunos se encuentran a lo largo del **README**.
 
+**Diapositivas - Presentación TFM:** https://docs.google.com/presentation/d/1vxPfJCT9PiGooqf7ZuYJarHhuGcqYK9dp3IKWR0yFNU/edit#slide=id.p
+
 **Vídeo - Presentación TFM:** https://drive.google.com/file/d/1JZdZCCb6RiHNMdO3oGSmYF0dPP_pnUYL/view?usp=sharing
 
 **Web Streamlit - FireDetector:** https://firedetector-tfm.streamlit.app
