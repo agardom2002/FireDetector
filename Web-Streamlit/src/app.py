@@ -308,9 +308,9 @@ def tab_alarma():
 
 def no_detection():
     tts = text_to_speech(no_detecta[LANGUAGES[lang]], LANGUAGES[lang])
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as ruta_archivo:
-            tts.save(ruta_archivo.name)
-            autoplay_audio(ruta_archivo.name)
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as ruta_archivo:
+        tts.save(ruta_archivo.name)
+        autoplay_audio(ruta_archivo.name)
 
 # Tratado del texto
 def procesar_texto(texto):
