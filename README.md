@@ -5,7 +5,7 @@
 
 **Web:** [🔥FireDetector🔥](https://firedetector-tfm.streamlit.app/).
 
-**Vídeo:** ["Video_TFM.mov"](https://drive.google.com/file/d/1JZdZCCb6RiHNMdO3oGSmYF0dPP_pnUYL/view?usp=sharing)
+**Vídeo:** [🎬Video_TFM.mov🎬](https://drive.google.com/file/d/1JZdZCCb6RiHNMdO3oGSmYF0dPP_pnUYL/view?usp=sharing)
 
 ## Índice
 ✔️[1. Justificación y descripción del proyecto.](#id1)
