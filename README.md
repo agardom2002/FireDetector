@@ -445,7 +445,7 @@ Copiamos la carpeta runs a un directorio de nuestro Google Drive.
 !cp -r /content/runs /content/drive/MyDrive/runs
 ```
 
-Tras terminar el entrenamiento vemos un resumen de las iteraciones que ha realizado:
+Tras terminar el entrenamiento vemos un resumen de las iteraciones que ha realizado. Nos fijamos que el modelo con mayor precisión es del 88,31%.
 
 | **epoch** | **train/box_loss** | **train/cls_loss** | **train/dfl_loss** | **metrics/precision(B)** | **metrics/recall(B)** | **metrics/mAP50(B)** | **metrics/mAP50-95(B)** | **val/box_loss** | **val/cls_loss** | **val/dfl_loss** | **lr/pg0** | **lr/pg1** | **lr/pg2** |
 |-----------|--------------------|--------------------|--------------------|--------------------------|-----------------------|----------------------|-------------------------|------------------|------------------|------------------|------------|------------|------------|
@@ -465,6 +465,14 @@ Tras terminar el entrenamiento vemos un resumen de las iteraciones que ha realiz
 Por otro lado, podemos ver una foto generada por el propio modelo dónde nos muestra diferentes gráficas con los resultados.
 
 <img src="Imgs/results.png" width="100%">
+
+Podemos ver otras imágenes que nos crea para ver el rendimiento como la precisión según la confianza (confidence):
+
+<img src="Imgs/precision-confianza.png" width="100%">
+
+También visualizamos la gráfica de la precisión según el recall:
+
+<img src="Imgs/precision-recall.png" width="100%">
 
 Observamos la matriz de confusión y nos aseguramos de que no detecta el fondo como fuego y viceversa.
 
