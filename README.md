@@ -1146,7 +1146,7 @@ if __name__ == "__main__":
 
 ## 9. Conclusiones.<a name="id9"></a>
 
-La experiencia se adquiere trabajando con tecnologías desconocidas, es inmensa, no solo por el tiempo que se emplea buscando información, sino por la cantidad de errores y problemas que hay que resolver. Para nosotros, herramientas como YOLO o Streamlit han sido tanto una maravilla como un reto, pero estamos orgullosos del resultado obtenido, dado que ha cumplido con creces nuestras expectativas.
+La experiencia que se adquiere trabajando con tecnologías desconocidas, es inmensa, no solo por el tiempo que se emplea buscando información, sino por la cantidad de errores y problemas que hay que resolver. Para nosotros, herramientas como YOLO o Streamlit han sido tanto una maravilla como un reto, pero estamos orgullosos del resultado obtenido, dado que ha cumplido con creces nuestras expectativas.
 
 Hemos logrado un buen entrenamiento que le da robustez a nuestro modelo, así como una página con complementos y bien decorada dentro de lo que permite Streamlit. El hecho de trabajar con reconocimiento de imágenes nos ha permitido cubrir posibles vacíos de conocimiento y nos ha preparado para las prácticas y lo que venga más adelante.
 
