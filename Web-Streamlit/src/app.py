@@ -65,6 +65,9 @@ LANGUAGES = {
 texto_audio = {"es": "ALERTA! FUEGO DETECTADO!", "en": "Alert, fire detected", "fr": "Alerte, incendie détecté",
                "de": "Alarm, Feuer erkannt", "it": "Allerta, rilevato incendio"}
 
+no_detecta = {"es": "Lo siento, no te he entendido.", "en": "I'm sorry, I didn't understand you.", "fr": "Je suis désolé, je ne t'ai pas compris.",
+               "de": "Es tut mir leid, ich habe dich nicht verstanden.", "it": "Mi dispiace, non ti ho capito."}
+
 # Inicializacion del array que guardara los apartados procesados con NPL
 pre_titles = []
 
@@ -303,6 +306,12 @@ def tab_alarma():
     
         st.image(anotaciones)
 
+def no_detection():
+    tts = text_to_speech(no_detecta[LANGUAGES[lang]], LANGUAGES[lang])
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as ruta_archivo:
+            tts.save(ruta_archivo.name)
+            autoplay_audio(ruta_archivo.name)
+
 # Tratado del texto
 def procesar_texto(texto):
     # Convertir a minúsculas
@@ -326,6 +335,8 @@ def procesar_texto(texto):
     
     # Unir tokens en un solo string
     processed_text = ' '.join(tokens)
+
+    no_detection()
 
     # Si ningun token coincide devolvemos el texto procesado
     return processed_text
