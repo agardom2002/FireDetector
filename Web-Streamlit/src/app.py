@@ -307,6 +307,7 @@ def tab_alarma():
         st.image(anotaciones)
 
 def no_detection():
+    lang = state.langs
     tts = text_to_speech(no_detecta[LANGUAGES[lang]], LANGUAGES[lang])
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as ruta_archivo:
         tts.save(ruta_archivo.name)
