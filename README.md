@@ -163,7 +163,7 @@ Comprobamos cómo están estructurados los archivos. Enlace al [Colab](https://c
 
 En este dataset estructurado en árboles de carpetas encontramos tres ramas importantes; train, test y valid. En cada una de estas carpetas hay una carpeta que guarda las imágenes y otra que contiene los archivos .txt para indicar la segmentación de la imagen.
 
-Si nos fijamos en la carpeta train, nos damos cuenta las imagenes tienen la misma estructura: [nombre]_png.rf.[identificador].jpg. Además, este identificador lo contiene el mismos archivo .txt asociado a esta imagen en su respectiva carpeta.
+Si nos fijamos en la carpeta train, nos damos cuenta las imágenes tienen la misma estructura: [nombre]_png.rf.[identificador].jpg. Además, este identificador lo contiene el mismos archivo .txt asociado a esta imagen en su respectiva carpeta.
 
 Esta información la usaremos para comprobar que cada imagen tenga un label asociado, así como que cada carpeta contenga archivos de extensión correcta (.txt para los labels y .png o .jpg para las imágenes). Si no ocurre esto, se guardará este archivo o carpeta en una nueva carpeta creada para decidir qué hacer con ella.
 
