@@ -1,7 +1,7 @@
 # Fire Detector
 <img src="Imgs/LogoFireDetector.png" height="100%" width="100%">
 
-***Proyecto realizado por [Alejandro Fernández Romero](https://github.com/AlexFdezRomero) y [Andrés García Domínguez](https://github.com/agardom2002).***
+***Proyecto realizado por [Alejandro Fernández Romero](https://github.com/AlexFdezRomero) -- 50% y [Andrés García Domínguez](https://github.com/agardom2002)-- 50%.***
 
 **Web:** [🔥FireDetector🔥](https://firedetector-tfm.streamlit.app/).
 
