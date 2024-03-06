@@ -1028,7 +1028,7 @@ def tab_alarma():
         # Leer img_file_buffer con CV2:
         bytes_data = img_file_buffer.getvalue()
         cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
-        resultado = model.predict(cv2_img, imgsz=640, conf=0.37)
+        resultado = model.predict(cv2_img, imgsz=640, conf=0.80)
         anotaciones = resultado[0].plot()
         anotaciones = cv2.cvtColor(anotaciones, cv2.COLOR_BGR2RGB)
 
