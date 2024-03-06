@@ -917,7 +917,7 @@ class ProcesadorVideo:
         # Transformamos el frame de Streamlit a una imagen de numpy BGR
         img = frame.to_ndarray(format="bgr24")
         # Usamos el modelo YOLO para predecir el fuego en el frame
-        resultados = model.predict(img, imgsz=640, conf=0.37)
+        resultados = model.predict(img, imgsz=640, conf=0.80)
         # Añadimos la segmentacion con la deteccion a la imagen
         anotaciones = resultados[0].plot()
 
