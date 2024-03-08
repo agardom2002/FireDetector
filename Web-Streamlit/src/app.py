@@ -185,7 +185,7 @@ class ProcesadorVideo:
         # Transformamos el frame de Streamlit a una imagen de numpy BGR
         img = frame.to_ndarray(format="bgr24")
         # Usamos el modelo YOLO para predecir el fuego en el frame
-        resultados = model.predict(img, imgsz=640, conf=0.70)
+        resultados = model.predict(img, imgsz=640, conf=0.37)
         # Añadimos la segmentacion con la deteccion a la imagen
         anotaciones = resultados[0].plot()
 
@@ -296,7 +296,7 @@ def tab_alarma():
         # Leer img_file_buffer con CV2:
         bytes_data = img_file_buffer.getvalue()
         cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
-        resultado = model.predict(cv2_img, imgsz=640, conf=0.70)
+        resultado = model.predict(cv2_img, imgsz=640, conf=0.37)
         anotaciones = resultado[0].plot()
         anotaciones = cv2.cvtColor(anotaciones, cv2.COLOR_BGR2RGB)
 
