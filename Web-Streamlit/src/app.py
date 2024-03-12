@@ -201,7 +201,7 @@ def tab_deteccion():
 
     st.subheader("Detección de Vídeo: ", divider = "red")    
 
-    confidence = st.slider(label="Nivel de confianza: ", value=0.37, min_value=0.00 max_value=1.00, key="conf")
+    confidence = st.slider(label="Nivel de confianza: ", value=0.37, min_value=0.00, max_value=1.00, step=0.01, key="conf")
 
     # Configuracion de WebRTC (Web Real-Time Communication)
     # Establecemos el servidor ICE (Interactive Connectivity Establishment)
@@ -270,7 +270,7 @@ def tab_alarma():
     # Checkbox para indicar si enviar un email o no
     env_mail = st.checkbox('Enviar correo electrónico')
 
-    confidence2 = st.slider(label="Nivel de confianza: ", value=0.37, min_value=0.00 max_value=1.00, key="conf2")
+    confidence2 = st.slider(label="Nivel de confianza: ", value=0.37, min_value=0.00, max_value=1.00, step=0.01, key="conf2")
 
     # Comprobamos que si se ha seleccionado
     if env_mail:
