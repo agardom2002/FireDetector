@@ -185,7 +185,7 @@ class ProcesadorVideo:
         # Transformamos el frame de Streamlit a una imagen de numpy BGR
         img = frame.to_ndarray(format="bgr24")
         # Usamos el modelo YOLO para predecir el fuego en el frame
-        resultados = model.predict(img, imgsz=640, conf=confidence)
+        resultados = model.predict(img, imgsz=640, conf=0.37)
         # Añadimos la segmentacion con la deteccion a la imagen
         anotaciones = resultados[0].plot()
 
@@ -197,7 +197,7 @@ def tab_deteccion():
 
     st.subheader("Detección de Vídeo: ", divider = "red")    
 
-    confidence = st.slider(label="Nivel de confianza: ", value=0.37, min_value=0.00, max_value=1.00, step=0.01, key="conf")
+    # confidence = st.slider(label="Nivel de confianza: ", value=0.37, min_value=0.00, max_value=1.00, step=0.01, key="conf")
 
     # Configuracion de WebRTC (Web Real-Time Communication)
     # Establecemos el servidor ICE (Interactive Connectivity Establishment)
