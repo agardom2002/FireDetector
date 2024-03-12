@@ -94,10 +94,6 @@ if 'langs' not in state:
 if 'email' not in state:
     state.email = False
 
-# Inicializamos el estado de sesion para la confianza
-if 'conf' not in state:
-    state.conf = 0.37
-
 # -- INTRODUCCION --
 
 # Funcion que muestra todo el contenido del apartado 'Introduccion'
