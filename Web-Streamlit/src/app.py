@@ -94,6 +94,10 @@ if 'langs' not in state:
 if 'email' not in state:
     state.email = False
 
+# Inicializamos el estado de sesion para la confianza
+if 'conf' not in state:
+    state.conf = 0.37
+
 # -- INTRODUCCION --
 
 # Funcion que muestra todo el contenido del apartado 'Introduccion'
@@ -185,7 +189,7 @@ class ProcesadorVideo:
         # Transformamos el frame de Streamlit a una imagen de numpy BGR
         img = frame.to_ndarray(format="bgr24")
         # Usamos el modelo YOLO para predecir el fuego en el frame
-        resultados = model.predict(img, imgsz=640, conf=0.37)
+        resultados = model.predict(img, imgsz=640, conf=confidence)
         # Añadimos la segmentacion con la deteccion a la imagen
         anotaciones = resultados[0].plot()
 
@@ -196,6 +200,8 @@ class ProcesadorVideo:
 def tab_deteccion():
 
     st.subheader("Detección de Vídeo: ", divider = "red")    
+
+    confidence = st.slider("Nivel de confianza: ", value=0.37, min_value=0.00 max_value=1.00)
 
     # Configuracion de WebRTC (Web Real-Time Communication)
     # Establecemos el servidor ICE (Interactive Connectivity Establishment)
@@ -264,6 +270,8 @@ def tab_alarma():
     # Checkbox para indicar si enviar un email o no
     env_mail = st.checkbox('Enviar correo electrónico')
 
+    confidence2 = st.slider("Nivel de confianza: ", value=0.37, min_value=0.00 max_value=1.00)
+
     # Comprobamos que si se ha seleccionado
     if env_mail:
 
@@ -296,7 +304,7 @@ def tab_alarma():
         # Leer img_file_buffer con CV2:
         bytes_data = img_file_buffer.getvalue()
         cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
-        resultado = model.predict(cv2_img, imgsz=640, conf=0.37)
+        resultado = model.predict(cv2_img, imgsz=640, conf=confidence2)
         anotaciones = resultado[0].plot()
         anotaciones = cv2.cvtColor(anotaciones, cv2.COLOR_BGR2RGB)
 
